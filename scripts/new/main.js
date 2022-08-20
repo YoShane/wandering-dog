@@ -1,7 +1,7 @@
 /*
 Template Name: Happy Paws
 Author: Ingrid Kuhn
-Author URI: https://themeforest.net/user/ingridk
+Author URI: http://themeforest.net/user/ingridk
 */
 
 //Strict Mode 
@@ -211,7 +211,7 @@ Author URI: https://themeforest.net/user/ingridk
 
 		
 		 /**
-		 * Copyright (c) 2007-2012 Ariel Flesler - aflesler(at)gmail(dot)com | https://flesler.blogspot.com
+		 * Copyright (c) 2007-2012 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
 		 * Dual licensed under MIT and GPL.  滑動效果
 		 * @author Ariel Flesler
 		 * @version 1.4.3

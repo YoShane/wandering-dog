@@ -4,7 +4,7 @@
  * Copyright (c) 2007-2017 Mika Tuupola
  *
  * Licensed under the MIT license:
- *   https://www.opensource.org/licenses/mit-license.php
+ *   http://www.opensource.org/licenses/mit-license.php
  *
  * Project home:
  *   https://appelsiini.net/projects/lazyload

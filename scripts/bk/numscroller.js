@@ -1,7 +1,7 @@
 /**
 * jQuery scroroller Plugin 1.0
 *
-* https://www.tinywall.net/
+* http://www.tinywall.net/
 * 
 * Developers: Arun David, Boobalan
 * Copyright (c) 2014 

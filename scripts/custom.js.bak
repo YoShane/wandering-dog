@@ -484,6 +484,9 @@ $(document).ready(function(){
 		centerMode: true,
 		centerPadding: '20%',
 		slidesToShow: 2, 
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
 		responsive: [
 			{
 			  breakpoint: 1367,
@@ -504,7 +507,11 @@ $(document).ready(function(){
 			    slidesToShow: 1
 			  }
 			}
+			
+
 		]
+		
+		
 	});
 
 
@@ -1006,7 +1013,7 @@ $(document).ready(function(){
 	});
 
 
-	/*----------------------------------------------------*/
+		/*----------------------------------------------------*/
 	/* Listing Page Nav
 	/*----------------------------------------------------*/
 
@@ -1066,6 +1073,8 @@ $(document).ready(function(){
 		    }
 		});
 	});
+
+
 
 
 	/*----------------------------------------------------*/
@@ -1210,8 +1219,8 @@ $(document).ready(function(){
 
 /*!
  * jquery.scrollto.js 0.0.1 - https://github.com/yckart/jquery.scrollto.js
- * Copyright (c) 2012 Yannick Albert (http://yckart.com)
- * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
+ * Copyright (c) 2012 Yannick Albert (https://yckart.com)
+ * Licensed under the MIT license (https://www.opensource.org/licenses/mit-license.php).
  **/
 
 $.scrollTo = $.fn.scrollTo = function(x, y, options){
@@ -1342,3 +1351,5 @@ function forgetpw(){alert('更改密碼請來電04-25812116#332 ，與游護理�
         itemsDesktopSmall: [979, 3],
         itemsMobile: [639, 1]
     });
+	
+	

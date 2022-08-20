@@ -1219,8 +1219,8 @@ $(document).ready(function(){
 
 /*!
  * jquery.scrollto.js 0.0.1 - https://github.com/yckart/jquery.scrollto.js
- * Copyright (c) 2012 Yannick Albert (https://yckart.com)
- * Licensed under the MIT license (https://www.opensource.org/licenses/mit-license.php).
+ * Copyright (c) 2012 Yannick Albert (http://yckart.com)
+ * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
  **/
 
 $.scrollTo = $.fn.scrollTo = function(x, y, options){

@@ -1,7 +1,7 @@
 /*
 Template Name: Happy Paws
 Author: Ingrid Kuhn
-Author URI: https://themeforest.net/user/ingridk
+Author URI: http://themeforest.net/user/ingridk
 */
 
 //Strict Mode 

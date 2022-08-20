@@ -52,7 +52,7 @@ function GetSQLValueString($Wandering,$theValue, $theType, $theDefinedValue = ""
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
   }
 
-  $theValue = function_exists("mysqli_real_escape_string") ? mysqli_real_escape_string($Wandering, $theValue) : mysqli_escape_string($Wandering, $theValue);
+  $theValue = function_exists("mysqli_real_escape_string") ? mysqli_real_escape_string($theValue) : mysqli_escape_string($theValue);
 
   switch ($theType) {
     case "text":
@@ -78,25 +78,25 @@ function GetSQLValueString($Wandering,$theValue, $theType, $theDefinedValue = ""
 
 
 $query_rs_dogpoint = "SELECT * FROM dogpoint WHERE dType = 1";
-$rs_dogpoint = mysqli_query($Wandering, $query_rs_dogpoint) or die(mysqli_error());
+$rs_dogpoint = mysqli_query($Wandering,$query_rs_dogpoint) or die(mysqli_error());
 $row_rs_dogpoint = mysqli_fetch_assoc($rs_dogpoint);
 $totalRows_rs_dogpoint = mysqli_num_rows($rs_dogpoint);
 
 
 $query_rs_dogpoint2 = "SELECT * FROM collect WHERE cId = 1";
-$rs_dogpoint2 = mysqli_query($Wandering, $query_rs_dogpoint2) or die(mysqli_error());
+$rs_dogpoint2 = mysqli_query($Wandering,$query_rs_dogpoint2) or die(mysqli_error());
 $row_rs_dogpoint2 = mysqli_fetch_assoc($rs_dogpoint2);
 $totalRows_rs_dogpoint2 = mysqli_num_rows($rs_dogpoint2);
 
 
 $query_rs_mapcenter = "SELECT * FROM mapcenter WHERE mId = 1";
-$rs_mapcenter = mysqli_query($Wandering, $query_rs_mapcenter) or die(mysqli_error());
+$rs_mapcenter = mysqli_query($Wandering,$query_rs_mapcenter) or die(mysqli_error());
 $row_rs_mapcenter = mysqli_fetch_assoc($rs_mapcenter);
 $totalRows_rs_mapcenter = mysqli_num_rows($rs_mapcenter);
 
 
 $query_rs_slide = "SELECT * FROM slider ORDER BY sOrder ASC";
-$rs_slide = mysqli_query($Wandering, $query_rs_slide) or die(mysqli_error());
+$rs_slide = mysqli_query($Wandering,$query_rs_slide) or die(mysqli_error());
 $row_rs_slide = mysqli_fetch_assoc($rs_slide);
 $totalRows_rs_slide = mysqli_num_rows($rs_slide);
 
@@ -110,13 +110,13 @@ $startRow_rs_shownew = $pageNum_rs_shownew * $maxRows_rs_shownew;
 
 $query_rs_shownew = "SELECT * FROM post ORDER BY pStime DESC";
 $query_limit_rs_shownew = sprintf("%s LIMIT %d, %d", $query_rs_shownew, $startRow_rs_shownew, $maxRows_rs_shownew);
-$rs_shownew = mysqli_query($Wandering, $query_limit_rs_shownew) or die(mysqli_error());
+$rs_shownew = mysqli_query($Wandering,$query_limit_rs_shownew) or die(mysqli_error());
 $row_rs_shownew = mysqli_fetch_assoc($rs_shownew);
 
 if (isset($_GET['totalRows_rs_shownew'])) {
   $totalRows_rs_shownew = $_GET['totalRows_rs_shownew'];
 } else {
-  $all_rs_shownew = mysqli_query($Wandering, $query_rs_shownew);
+  $all_rs_shownew = mysqli_query($Wandering,$query_rs_shownew);
   $totalRows_rs_shownew = mysqli_num_rows($all_rs_shownew);
 }
 $totalPages_rs_shownew = ceil($totalRows_rs_shownew/$maxRows_rs_shownew)-1;
@@ -240,7 +240,7 @@ require_once ('includes/recaptcha/autoload.php'); $secret = '6LcG5iwUAAAAAGxD8He
   $LoginRS__query=sprintf("SELECT uAccount, uPassword, uLevel FROM `user` WHERE uAccount=%s AND uPassword=%s",
   GetSQLValueString($Wandering,$loginUsername, "text"), GetSQLValueString($Wandering,$password, "text")); 
    
-  $LoginRS = mysqli_query($Wandering, $LoginRS__query) or die(mysqli_error());
+  $LoginRS = mysqli_query($Wandering,$LoginRS__query) or die(mysqli_error());
   $loginFoundUser = mysqli_num_rows($LoginRS);
   if ($loginFoundUser) {
     
@@ -618,7 +618,7 @@ elseif($row_rs_shownew['pType'] == 4){ echo "綜合";} ?></span>
 <?php 
 
 $query_rs_footer = "SELECT * FROM footer WHERE fId = 1";
-$rs_footer = mysqli_query($Wandering, $query_rs_footer) or die(mysqli_error());
+$rs_footer = mysqli_query($Wandering,$query_rs_footer) or die(mysqli_error());
 $row_rs_footer = mysqli_fetch_assoc($rs_footer);
 $totalRows_rs_footer = mysqli_num_rows($rs_footer); ?>
 ================================================== -->
